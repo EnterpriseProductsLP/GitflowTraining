@@ -17,5 +17,16 @@ master.commit({
 
 var develop = master.branch("develop");
 develop.checkout();
+develop.commit({
+    sha1: "783d17",
+    message: "Created develop branch.",
+    author: "Eric Burcham <eburcham@eprod.com>",
+});
 
-develop.commit();
+var addFeatureWorkflow = develop.branch("f-add-feature-workflow");
+addFeatureWorkflow.commit({
+    sha1: "bfb874",
+    message: "Master branch created with initial commit.  Develop branch created.  Time to put some text next to them.",
+    author: "Eric Burcham <eburcham@eprod.com>",
+});
+
