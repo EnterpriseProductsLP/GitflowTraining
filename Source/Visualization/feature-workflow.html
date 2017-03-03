@@ -3,16 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Gitflow Basics</title>
-    <link rel="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.css"/>
+    <link rel="stylesheet" href="css/visualizations.css">
 </head>
 <body>
-<div id="header">
+<div class="header">
     <h1>Git Flow:  Features</h1>
 </div>
-<div id="body" style="margin: 0 auto; width: 800px; position: relative;">
+<div class="body">
     <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
     <div id="content" style="position: absolute; top:0; left: 400px;;">
-        <h2>This is some shit to see, right here...</h2>
+        <div class="step">
+            <h2>Start a new feature:</h2>
+            <div>Development of new features starts from the "develop" branch.</div>
+            <div class="console">
+                git flow feature start add-feature-workflow
+            </div>
+        </div>
+        <div class="step">
+
+        <h2>Work on your feature:</h2>
+        <div>Work on your feature, and create one or more commits.</div>
+        <div class="console">
+            git add . <br />
+            git commit -am Did some work.
+        </div>
+        </div>
+            <div class="step">
+
+            <h2>Finish your feature:</h2>
+        <div>Finish your feature.  This action:
+        <ul>
+            <li>Merges your feature into develop.</li>
+            <li>Removes the feature branch.</li>
+            <li>Switches back to the develop branch.</li>
+        </ul>
+        </div>
+        <div class="console">
+            fit flow feature finish add-feature-workflow
+        </div>
+            </div>
     </div>
 </div>
 

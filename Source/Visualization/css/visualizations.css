@@ -1,0 +1,16 @@
+.body{
+    margin: 0 auto; width: 800px; position: relative;
+}
+
+.console {
+    background: lightsteelblue;
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+}
+
+.header{
+    margin: 0 auto; width: 800px; position: relative;
+}
+
+.step {
+    background-color: #DDDDDD;
+}

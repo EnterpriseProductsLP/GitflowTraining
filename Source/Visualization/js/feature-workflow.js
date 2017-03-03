@@ -36,3 +36,5 @@ addFeatureWorkflow.commit({
     author: "Eric Burcham <eburcham@eprod.com>",
 });
 
+addFeatureWorkflow.merge(develop, { dotColor: "red" });
+
