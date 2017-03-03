@@ -1,5 +1,10 @@
-h1, h2 {
-    background-color: black;
+h1 {
+    background-color: #000000;
+    color: white;
+}
+
+h2 {
+    background-color: #666666;
     color: white;
 }
 
