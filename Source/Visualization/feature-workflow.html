@@ -9,37 +9,38 @@
 <body>
 <div class="header">
     <h1>Feature Workflow</h1>
+    <p>Bugfixes are identical...</p>
 </div>
 <div class="body">
     <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
-    <div id="content" style="position: absolute; top:0; left: 400px;;">
+    <div id="content" style="position: absolute; top:0; left: 400px;">
         <div class="step">
             <h2>Start a new feature:</h2>
-            <div>Development of new features starts from the "develop" branch.</div>
-            <div class="console">
+            <p>Development of new features starts from the "develop" branch.</p>
+            <p class="console">
                 git flow feature start [my-feature]
-            </div>
+            </p>
         </div>
         <div class="step">
             <h2>Work on your feature:</h2>
-            <div>Work on your feature, and create one or more commits.</div>
-            <div class="console">
+            <p>Work on your feature, and create one or more commits.</p>
+            <p class="console">
                 git add . <br/>
                 git commit -am "Did some work."
-            </div>
+            </p>
         </div>
         <div class="step">
             <h2>Finish your feature:</h2>
-            <div>Finish your feature. This action:
+            <p>Finish your feature. This action:
                 <ul>
                     <li>Merges your feature into develop.</li>
                     <li>Removes the feature branch.</li>
                     <li>Switches back to the develop branch.</li>
                 </ul>
-            </div>
-            <div class="console">
+            </p>
+            <p class="console">
                 git flow feature finish [my-feature]
-            </div>
+            </p>
         </div>
     </div>
 </div>

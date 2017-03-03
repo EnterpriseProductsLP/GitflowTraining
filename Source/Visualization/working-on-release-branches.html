@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working on Release Branches in Estream.</title>
+    <link rel="stylesheet" href="bower_components/gitgraph.js/src/gitgraph.css"/>
+    <link rel="stylesheet" href="css/visualizations.css">
+</head>
+<body>
+<div class="header">
+    <h1>Working on Release Branches in Estream</h1>
+</div>
+<div class="body">
+    <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
+    <div id="content" style="position: absolute; top:0; left: 400px;">
+        <div class="step">
+            <h2 class="important-step">WAKE UP! PAY ATTENTION!:</h2>
+            <p>Here are the rules for working on Ethane systems.
+            <ol>
+                <li>Branches for Ethane Systems <strong>MUST</strong> be cut from the latest release branch, <strong></strong> from develop.</li>
+                <li><strong>NEVER, EVER,</strong> merge the develop branch to the Ethane Systems release branch.</li>
+                <li>Changes go through normal QA process through the "verify" and "validate" steps.</li>
+                <li>Developer needs to get code changes approved by a SME.</li>
+                <li>Developer sends an email to Sunil Sukumaran to merge the code.</li>
+                <li>Someone with access to the release branch will merge the code and let the developer know once it is
+                    done.
+                </li>
+            </ol>
+            </p>
+            </p>
+        </div>
+        <div class="step">
+            <h2>Start a new feature or bugfix:</h2>
+            <p>Development MUST start from the [release] branch.</p>
+            <p class="console">
+                git flow feature start [version] [release] <br/>
+                or... <br/>
+                git flow bugfix start [version] [release]
+            </p>
+        </div>
+        <div class="step">
+            <h2>Work on your feature or bugfix:</h2>
+            <p>Work on your feature or bugfix, and create one or more commits.</p>
+            <p class="console">
+                git add . <br/>
+                git commit -am "How did we miss that before?"
+            </p>
+        </div>
+        <div class="step">
+            <h2>Finish your feature or bugfix:</h2>
+            <p>Finish your feature or bugfix. This action:
+            <ul>
+                <li>Merges your feature into [release].</li>
+                <li>Removes the feature or bugfix branch.</li>
+                <li>Switches back to the [develop] branch.</li>
+            </ul>
+            </p>
+            <p class="console">
+                git flow feature finish [version] <br/>
+                or... <br/>
+                git flow bugfix finish [version] <br/>
+                git push <br/>
+            </p>
+        </div>
+        <div class="step">
+            <h2>Clean up:</h2>
+            <p>You're not done yet! You still need to merge the release branch back into develop!</p>
+            <p class="console">
+                git checkout develop<br/>
+                git merge [release]
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="bower_components/jquery/src/jquery.js"></script>
+<script src="bower_components/gitgraph.js/src/gitgraph.js"></script>
+<script src="js/working-on-release-branches.js"></script>
+</body>
+</html>

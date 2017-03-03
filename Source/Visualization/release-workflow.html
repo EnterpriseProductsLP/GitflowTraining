@@ -12,26 +12,26 @@
 </div>
 <div class="body">
     <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
-    <div id="content" style="position: absolute; top:0; left: 400px;;">
+    <div id="content" style="position: absolute; top:0; left: 400px;">
         <div class="step">
             <h2>Start a new release:</h2>
-            <div>Releases start from the "develop" branch.</div>
-            <div>Optionally can be started from a [base] branch.</div>
-            <div class="console">
+            <p>Releases start from the "develop" branch.</p>
+            <p>Optionally can be started from a [base] branch.</p>
+            <p class="console">
                 git flow release start [version] [base]
-            </div>
+            </p>
         </div>
         <div class="step">
             <h2>Prepare your release:</h2>
-            <div>Make last-minute bug fixes.</div>
-            <div class="console">
+            <p>Make last-minute bug fixes.</p>
+            <p class="console">
                 git add . <br/>
                 git commit -am "Fixed the last bug."
-            </div>
+            </p>
         </div>
         <div class="step">
             <h2>Finish your release:</h2>
-            <div>Finish your release. This action:
+            <p>Finish your release. This action:
                 <ul>
                     <li>Merges the release branch back into "master."</li>
                     <li>Tags the release with its name.</li>
@@ -39,12 +39,12 @@
                     <li>Removes the release branch.</li>
                     <li>Pushed the release tag.</li>
                 </ul>
-            </div>
-            <div class="console">
+            </p>
+            <p class="console">
                 git flow release finish [version] <br/>
                 git push <br/>
                 git push --tags
-            </div>
+            </p>
         </div>
     </div>
 </div>

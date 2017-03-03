@@ -1,11 +1,33 @@
 /**
  * Created by Eric Burcham on 3/2/2017.
  */
+var templateConfig = {
+    colors: ["#979797", "#008fb5", "#f1c109"],
+    branch: {
+        lineWidth: 10,
+        spacingX: 50,
+        labelRotation: 0,
+        showLabel: true
+    },
+    commit: {
+        spacingY: -80,
+        dot: {
+            size: 14
+        },
+        message: {
+            font: "normal 14pt Arial"
+        }
+    }
+};
+
+var template = new GitGraph.Template(templateConfig);
+
 var gitgraph = new GitGraph({
-    template: "metro",
+    template: template,
     orientation: "vertical",
     mode: "compact"
 });
+
 
 var master = gitgraph.branch("master");
 master.checkout();
@@ -24,7 +46,7 @@ develop.commit({
 var hotfix = master.branch("hotfix");
 hotfix.checkout();
 hotfix.commit({
-   message: "This is MUCH less broken.",
+    message: "This is MUCH less broken.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 

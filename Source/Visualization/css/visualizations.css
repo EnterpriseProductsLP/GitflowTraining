@@ -8,6 +8,11 @@ h2 {
     color: white;
 }
 
+h2.important-step{
+    background-color: #CCCCCC;
+    color: red;
+}
+
 .body {
     margin: 0 auto;
     width: 800px;
