@@ -2,43 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gitflow Features</title>
+    <title>Gitflow Releases</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.css"/>
     <link rel="stylesheet" href="css/visualizations.css">
 </head>
 <body>
 <div class="header">
-    <h1>Git Flow: Features</h1>
+    <h1>Git Flow: Releases</h1>
 </div>
 <div class="body">
     <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
     <div id="content" style="position: absolute; top:0; left: 400px;;">
         <div class="step">
-            <h2>Start a new feature:</h2>
-            <div>Development of new features starts from the "develop" branch.</div>
+            <h2>Start a new release:</h2>
+            <div>Releases start from the "develop" branch.</div>
             <div class="console">
-                git flow feature start add-feature-workflow
+                git flow release start 1.0.0.0
             </div>
         </div>
         <div class="step">
-            <h2>Work on your feature:</h2>
-            <div>Work on your feature, and create one or more commits.</div>
+            <h2>Prepare your release:</h2>
+            <div>Make last-minute bug fixes.</div>
             <div class="console">
                 git add . <br/>
-                git commit -am "Did some work."
+                git commit -am "Fixed the last bug."
             </div>
         </div>
         <div class="step">
-            <h2>Finish your feature:</h2>
-            <div>Finish your feature. This action:
+            <h2>Finish your release:</h2>
+            <div>Finish your release. This action:
                 <ul>
-                    <li>Merges your feature into develop.</li>
-                    <li>Removes the feature branch.</li>
-                    <li>Switches back to the develop branch.</li>
+                    <li>Merges the release branch back into "master."</li>
+                    <li>Tags the release with its name.</li>
+                    <li>Back-merges the release into "develop."</li>
+                    <li>Removes the release branch.</li>
+                    <li>Pushed the release tag.</li>
                 </ul>
             </div>
             <div class="console">
-                fit flow feature finish add-feature-workflow
+                git flow feature finish add-feature-workflow
+                git push --tags
             </div>
         </div>
     </div>
@@ -47,6 +50,6 @@
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.js"></script>
-<script src="js/feature-workflow.js"></script>
+<script src="js/release-workflow.js"></script>
 </body>
 </html>

@@ -1,16 +1,28 @@
-.body{
-    margin: 0 auto; width: 800px; position: relative;
+h1, h2 {
+    background-color: black;
+    color: white;
+}
+
+.body {
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
 }
 
 .console {
-    background: lightsteelblue;
+    background-color: lightblue;
+    font-size: 0.9em;
+    font-weight: bold;
     font-family: Consolas, "Lucida Console", Monaco, monospace;
+    padding: 4px;
 }
 
-.header{
-    margin: 0 auto; width: 800px; position: relative;
+.header {
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
 }
 
 .step {
-    background-color: #DDDDDD;
+    background-color: #EEEEEE;
 }
