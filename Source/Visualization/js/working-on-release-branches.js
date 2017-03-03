@@ -30,21 +30,23 @@ var gitgraph = new GitGraph({
 });
 
 var master = gitgraph.branch("master");
-master.checkout();
 master.commit({
     message: "Initial Commit",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
 var develop = master.branch("develop");
-develop.checkout();
 develop.commit({
     message: "Created develop branch.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
+develop.commit({
+    message: "Someone did a lot of work.",
+    author: "Someone Special <someone@eprod.com>"
+});
+
 var release = develop.branch("r-ethane-systems");
-release.checkout();
 release.commit({
     message: "Release branch created.",
     author: "Eric Burcham <eburcham@eprod.com>"
@@ -63,7 +65,6 @@ develop.commit({
 var feature = release.branch({
     name: "f-my-feature"
 });
-feature.checkout();
 feature.commit({
     message: "Eric worked on his feature.",
     author: "Eric Burcham <eburcham@eprod.com>"
@@ -80,7 +81,6 @@ feature.commit({
 });
 
 var bugfix = release.branch("b-my-bugfix");
-bugfix.checkout();
 bugfix.commit({
     message: "Dylan fixed Eric's bug.",
     author: "Dylan Clark <dsclark@eprod.com>"
@@ -91,16 +91,24 @@ develop.commit({
     author: "Someone Special <someone@eprod.com>"
 });
 
+feature.commit({
+    message: "Eric worked on his feature yet again.",
+    author: "Eric Burcham <eburcham@eprod.com>"
+});
+
+bugfix.merge(develop);
+
+feature.commit({
+    message: "Eric finished his feature.",
+    author: "Eric Burcham <eburcham@eprod.com>"
+});
+
 develop.commit({
     message: "Work on develop 5.",
     author: "Someone Special <someone@eprod.com>"
 });
 
-feature.checkout();
-feature.commit({
-    message: "Eric finished his feature.",
-    author: "Eric Burcham <eburcham@eprod.com>"
-});
+feature.merge(develop);
 
 bugfix.merge(release);
 feature.merge(release);
@@ -110,4 +118,3 @@ master.tag("v1.0.0.0");
 
 release.merge(develop);
 release.delete();
-master.checkout();

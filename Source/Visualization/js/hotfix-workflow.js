@@ -30,21 +30,18 @@ var gitgraph = new GitGraph({
 
 
 var master = gitgraph.branch("master");
-master.checkout();
 master.commit({
     message: "Initial Commit",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
 var develop = master.branch("develop");
-develop.checkout();
 develop.commit({
     message: "Created develop branch.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-var hotfix = master.branch("hotfix");
-hotfix.checkout();
+var hotfix = master.branch("h-my-hotfix");
 hotfix.commit({
     message: "This is MUCH less broken.",
     author: "Eric Burcham <eburcham@eprod.com>"
