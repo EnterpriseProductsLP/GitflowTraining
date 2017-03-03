@@ -43,7 +43,7 @@ develop.commit({
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-var release = develop.branch("f-add-feature-workflow");
+var release = develop.branch("r-ethane-systems");
 release.checkout();
 release.commit({
     message: "Release branch created.",
