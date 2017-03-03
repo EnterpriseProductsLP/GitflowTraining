@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gitflow Basics</title>
+    <title>Gitflow Features</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.8.3/gitgraph.min.css"/>
     <link rel="stylesheet" href="css/visualizations.css">
 </head>
 <body>
 <div class="header">
-    <h1>Git Flow:  Features</h1>
+    <h1>Git Flow: Features</h1>
 </div>
 <div class="body">
     <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
@@ -21,28 +21,26 @@
             </div>
         </div>
         <div class="step">
-
-        <h2>Work on your feature:</h2>
-        <div>Work on your feature, and create one or more commits.</div>
-        <div class="console">
-            git add . <br />
-            git commit -am Did some work.
-        </div>
-        </div>
-            <div class="step">
-
-            <h2>Finish your feature:</h2>
-        <div>Finish your feature.  This action:
-        <ul>
-            <li>Merges your feature into develop.</li>
-            <li>Removes the feature branch.</li>
-            <li>Switches back to the develop branch.</li>
-        </ul>
-        </div>
-        <div class="console">
-            fit flow feature finish add-feature-workflow
-        </div>
+            <h2>Work on your feature:</h2>
+            <div>Work on your feature, and create one or more commits.</div>
+            <div class="console">
+                git add . <br/>
+                git commit -am "Did some work."
             </div>
+        </div>
+        <div class="step">
+            <h2>Finish your feature:</h2>
+            <div>Finish your feature. This action:
+                <ul>
+                    <li>Merges your feature into develop.</li>
+                    <li>Removes the feature branch.</li>
+                    <li>Switches back to the develop branch.</li>
+                </ul>
+            </div>
+            <div class="console">
+                fit flow feature finish add-feature-workflow
+            </div>
+        </div>
     </div>
 </div>
 
