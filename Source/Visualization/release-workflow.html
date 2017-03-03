@@ -16,8 +16,9 @@
         <div class="step">
             <h2>Start a new release:</h2>
             <div>Releases start from the "develop" branch.</div>
+            <div>Optionally can be started from a [base] branch.</div>
             <div class="console">
-                git flow release start 1.0.0.0
+                git flow release start [version] [base]
             </div>
         </div>
         <div class="step">
@@ -40,7 +41,8 @@
                 </ul>
             </div>
             <div class="console">
-                git flow feature finish add-feature-workflow
+                git flow release finish [version] <br/>
+                git push <br/>
                 git push --tags
             </div>
         </div>

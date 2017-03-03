@@ -14,23 +14,23 @@ develop.commit({
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-var addFeatureWorkflow = develop.branch("f-add-feature-workflow");
-addFeatureWorkflow.checkout();
-addFeatureWorkflow.commit({
+var myFeature = develop.branch("my-feature");
+myFeature.checkout();
+myFeature.commit({
     message: "Master branch created with initial commit.  Develop branch created.  Time to put some text next to them.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-addFeatureWorkflow.commit({
+myFeature.commit({
     message: "Fixed a spelling error.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-addFeatureWorkflow.commit({
+myFeature.commit({
     message: "Got the visualization placed next to the text.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-addFeatureWorkflow.merge(develop);
-addFeatureWorkflow.delete();
+myFeature.merge(develop);
+myFeature.delete();
 develop.checkout();
