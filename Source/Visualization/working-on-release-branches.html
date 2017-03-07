@@ -14,7 +14,7 @@
     <canvas id="gitGraph" style="border: none;" width="400px" align="center"></canvas>
     <div id="content" style="position: absolute; top:0; left: 400px;">
         <div class="step">
-            <h2 class="important-step">WAKE UP! PAY ATTENTION!:</h2>
+            <h2 class="important-step">WAKE UP! PAY ATTENTION!</h2>
             <p>Here are the rules for working on Ethane systems.
             <ol>
                 <li>Branches for Ethane Systems <strong>MUST</strong> be cut from the latest release branch, <strong>NEVER</strong> from develop.</li>
@@ -33,9 +33,9 @@
             <h2>Start a new feature or bugfix:</h2>
             <p>Development MUST start from the [release] branch.</p>
             <p class="console">
-                git flow feature start [version] [release] <br/>
+                git flow feature start [my-feature] [release] <br/>
                 or... <br/>
-                git flow bugfix start [version] [release]
+                git flow bugfix start [my-bugfix] [release]
             </p>
         </div>
         <div class="step">
@@ -47,8 +47,22 @@
             </p>
         </div>
         <div class="step">
-            <h2>Finish your feature or bugfix:</h2>
-            <p>Finish your feature or bugfix. This action:
+            <h2>Clean up:</h2>
+            <p>Get your feature or bugfix through verification and validation.</p>
+            <p>Get a code review from the appropriate SME.</p>
+            <p>Merge your feature or bugfix back to develop.</p>
+            <p class="console">
+                git checkout develop<br/>
+                git merge f-[my-feature] <br/>
+                or... <br/>
+                git merge b-[my-bugfix]
+            </p>
+            <p><strong>DO NOT DELETE YOUR BRANCH!!!</strong></p>
+            <p>Email Sunil to let him know your feature or bugfix is finished.  Be sure to include your branch name.</p>
+        </div>
+        <div class="step">
+            <h2>Sunil will finish your feature or bugfix:</h2>
+            <p>This action:
             <ul>
                 <li>Merges your feature into [release].</li>
                 <li>Removes the feature or bugfix branch.</li>
@@ -56,18 +70,10 @@
             </ul>
             </p>
             <p class="console">
-                git flow feature finish [version] <br/>
+                git flow feature finish [my-feature] <br/>
                 or... <br/>
-                git flow bugfix finish [version] <br/>
+                git flow bugfix finish [my-bugfix] <br/>
                 git push <br/>
-            </p>
-        </div>
-        <div class="step">
-            <h2>Clean up:</h2>
-            <p>You're not done yet! You still need to merge the release branch back into develop!</p>
-            <p class="console">
-                git checkout develop<br/>
-                git merge [release]
             </p>
         </div>
     </div>

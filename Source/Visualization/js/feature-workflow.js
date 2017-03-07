@@ -30,14 +30,12 @@ var gitgraph = new GitGraph({
 
 
 var develop = gitgraph.branch("develop");
-develop.checkout();
 develop.commit({
     message: "Created develop branch.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
 var myFeature = develop.branch("my-feature");
-myFeature.checkout();
 myFeature.commit({
     message: "Master branch created with initial commit.  Develop branch created.  Time to put some text next to them.",
     author: "Eric Burcham <eburcham@eprod.com>"
@@ -55,4 +53,3 @@ myFeature.commit({
 
 myFeature.merge(develop);
 myFeature.delete();
-develop.checkout();
