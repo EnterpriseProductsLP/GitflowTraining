@@ -30,21 +30,18 @@ var gitgraph = new GitGraph({
 
 
 var master = gitgraph.branch("master");
-master.checkout();
 master.commit({
     message: "Initial Commit",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
 var develop = master.branch("develop");
-develop.checkout();
 develop.commit({
     message: "Created develop branch.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-var release = develop.branch("f-add-feature-workflow");
-release.checkout();
+var release = develop.branch("r-ethane-systems");
 release.commit({
     message: "Release branch created.",
     author: "Eric Burcham <eburcham@eprod.com>"
@@ -60,4 +57,3 @@ master.tag("v1.0.0.0");
 
 release.merge(develop);
 release.delete();
-master.checkout();
