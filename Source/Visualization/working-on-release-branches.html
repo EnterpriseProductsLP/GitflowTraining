@@ -17,13 +17,16 @@
             <h2 class="important-step">WAKE UP! PAY ATTENTION!</h2>
             <p>Here are the rules for working on Ethane systems.
             <ol>
-                <li>Branches for Ethane Systems <strong>MUST</strong> be cut from the latest release branch, <strong>NEVER</strong> from develop.</li>
+                <li>Branches for Ethane Systems <strong>MUST</strong> be cut from the latest release branch, <strong>NEVER</strong>
+                    from develop.
+                </li>
                 <li><strong>NEVER, EVER,</strong> merge the develop branch to the Ethane Systems release branch.</li>
                 <li>Changes go through normal QA process through the "verify" and "validate" steps.</li>
                 <li>Developer needs to get code changes approved by a SME.</li>
+                <li>Developer merges code changes to develop.</li>
                 <li>Developer sends an email to Sunil Sukumaran to merge the code.</li>
                 <li>Someone with access to the release branch will merge the code and let the developer know once it is
-                    done.
+                    done, and will delete the feature branch.
                 </li>
             </ol>
             </p>
@@ -58,7 +61,7 @@
                 git merge b-[my-bugfix]
             </p>
             <p><strong>DO NOT DELETE YOUR BRANCH!!!</strong></p>
-            <p>Email Sunil to let him know your feature or bugfix is finished.  Be sure to include your branch name.</p>
+            <p>Email Sunil to let him know your feature or bugfix is finished. Be sure to include your branch name.</p>
         </div>
         <div class="step">
             <h2>Sunil will finish your feature or bugfix:</h2>
