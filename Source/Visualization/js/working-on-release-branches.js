@@ -37,11 +37,6 @@ master.commit({
 
 var develop = master.branch("develop");
 develop.commit({
-    message: "Created develop branch.",
-    author: "Eric Burcham <eburcham@eprod.com>"
-});
-
-develop.commit({
     message: "Someone did a lot of work.",
     author: "Someone Special <someone@eprod.com>"
 });
@@ -52,16 +47,6 @@ release.commit({
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-develop.commit({
-    message: "Work on develop 1.",
-    author: "Someone Special <someone@eprod.com>"
-});
-
-develop.commit({
-    message: "Work on develop 2.",
-    author: "Someone Special <someone@eprod.com>"
-});
-
 var feature = release.branch({
     name: "f-my-feature"
 });
@@ -70,25 +55,9 @@ feature.commit({
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-develop.commit({
-    message: "Work on develop 3.",
-    author: "Someone Special <someone@eprod.com>"
-});
-
 feature.commit({
     message: "Eric worked on his feature some more.",
     author: "Eric Burcham <eburcham@eprod.com>"
-});
-
-var bugfix = release.branch("b-my-bugfix");
-bugfix.commit({
-    message: "Dylan fixed Eric's bug.",
-    author: "Dylan Clark <dsclark@eprod.com>"
-});
-
-develop.commit({
-    message: "Work on develop 4.",
-    author: "Someone Special <someone@eprod.com>"
 });
 
 feature.commit({
@@ -96,21 +65,13 @@ feature.commit({
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-bugfix.merge(develop);
-
 feature.commit({
     message: "Eric finished his feature.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
-develop.commit({
-    message: "Work on develop 5.",
-    author: "Someone Special <someone@eprod.com>"
-});
-
 feature.merge(develop);
 
-bugfix.merge(release);
 feature.merge(release);
 
 release.merge(master);

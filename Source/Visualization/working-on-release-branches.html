@@ -23,8 +23,7 @@
                 <li><strong>NEVER, EVER,</strong> merge the develop branch to the Ethane Systems release branch.</li>
                 <li>Changes go through normal QA process through the "verify" and "validate" steps.</li>
                 <li>Developer needs to get code changes approved by a SME.</li>
-                <li>Developer merges code changes to develop.</li>
-                <li>Developer sends an email to Sunil Sukumaran to merge the code.</li>
+                <li>Developer sends an email to Sunil to merge the code.</li>
                 <li>Someone with access to the release branch will merge the code and let the developer know once it is
                     done, and will delete the feature branch.
                 </li>
@@ -33,52 +32,55 @@
             </p>
         </div>
         <div class="step">
-            <h2>Start a new feature or bugfix:</h2>
+            <h2>Start a new feature:</h2>
             <p>Development MUST start from the [release] branch.</p>
             <p class="console">
                 git flow feature start [my-feature] [release] <br/>
-                or... <br/>
-                git flow bugfix start [my-bugfix] [release]
             </p>
         </div>
         <div class="step">
-            <h2>Work on your feature or bugfix:</h2>
-            <p>Work on your feature or bugfix, and create one or more commits.</p>
+            <h2>Work on your feature:</h2>
+            <p>Work on your feature, and create one or more commits.</p>
             <p class="console">
                 git add . <br/>
                 git commit -am "How did we miss that before?"
             </p>
         </div>
         <div class="step">
-            <h2>Clean up:</h2>
-            <p>Get your feature or bugfix through verification and validation.</p>
+            <h2>Finalize your work:</h2>
+            <p>Get your feature through verification and validation.</p>
             <p>Get a code review from the appropriate SME.</p>
-            <p>Merge your feature or bugfix back to develop.</p>
+            <p>Merge your feature back to develop.</p>
             <p class="console">
                 git checkout develop<br/>
                 git merge f-[my-feature] <br/>
-                or... <br/>
-                git merge b-[my-bugfix]
             </p>
             <p><strong>DO NOT DELETE YOUR BRANCH!!!</strong></p>
-            <p>Email Sunil to let him know your feature or bugfix is finished. Be sure to include your branch name.</p>
+            <p>Email Sunil to let him know your feature is finished. Be sure to include your branch name.</p>
         </div>
         <div class="step">
-            <h2>Sunil will finish your feature or bugfix:</h2>
+            <h2>Sunil will finish your feature:</h2>
+            <p>If your branch has not been merged to develop, WE WILL NOT MERGE IT TO ETHANE SYSTEMS.</p>
             <p>This action:
             <ul>
                 <li>Merges your feature into [release].</li>
-                <li>Removes the feature or bugfix branch.</li>
-                <li>Switches back to the [develop] branch.</li>
+                <li>DOES NOT REMOVE THE FEATURE BRANCH.</li>
             </ul>
             </p>
             <p class="console">
                 git flow feature finish [my-feature] <br/>
-                or... <br/>
-                git flow bugfix finish [my-bugfix] <br/>
                 git push <br/>
             </p>
         </div>
+        <div class="step">
+            <h2 class="important-step">FINAL CLEANUP</h2>
+            <p>
+            <ol>
+                <li>Sunil will email the release notes for the week's release.</li>
+                <li>Said release notes will contain the branches that were merged to r-ethane-systems.</li>
+                <li>If you branch was merged, you need to delete the branch.</li>
+            </ol>
+            </p>
     </div>
 </div>
 
