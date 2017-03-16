@@ -23,7 +23,7 @@ bld/
 [Oo]bj/
 
 # Webstorm project directory.
-.idea/
+.idea/workspace.xml
 
 # Visual Studio 2015 cache/options directory
 .vs/
