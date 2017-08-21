@@ -23,13 +23,13 @@ var templateConfig = {
 
 var template = new GitGraph.Template(templateConfig);
 
-var gitgraph = new GitGraph({
+var gitGraph = new GitGraph({
     template: template,
     orientation: "vertical",
     mode: "compact"
 });
 
-var master = gitgraph.branch("master");
+var master = gitGraph.branch("master");
 master.commit({
     message: "Initial Commit",
     author: "Eric Burcham <eburcham@eprod.com>"

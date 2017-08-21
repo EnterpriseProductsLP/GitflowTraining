@@ -22,14 +22,14 @@ var templateConfig = {
 
 var template = new GitGraph.Template(templateConfig);
 
-var gitgraph = new GitGraph({
+var gitGraph = new GitGraph({
     template: template,
     orientation: "vertical",
     mode: "compact"
 });
 
 
-var develop = gitgraph.branch("develop");
+var develop = gitGraph.branch("develop");
 develop.commit({
     message: "Created develop branch.",
     author: "Eric Burcham <eburcham@eprod.com>"

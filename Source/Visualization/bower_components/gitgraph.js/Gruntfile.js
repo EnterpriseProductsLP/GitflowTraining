@@ -35,12 +35,12 @@ module.exports = function ( grunt ) {
         banner: "<%= banner %>\n"
       },
       dist: {
-        src: [ "src/gitgraph.js" ],
-        dest: "dist/gitgraph.js"
+        src: [ "src/gitGraph.js" ],
+        dest: "dist/gitGraph.js"
       },
       release: {
-        src: [ "src/gitgraph.js" ],
-        dest: "build/gitgraph.js"
+        src: [ "src/gitGraph.js" ],
+        dest: "build/gitGraph.js"
       }
     },
 
@@ -48,14 +48,14 @@ module.exports = function ( grunt ) {
     copy: {
       dist: {
         files: [ {
-          src: [ "src/gitgraph.css" ],
-          dest: "dist/gitgraph.css"
+          src: [ "src/gitGraph.css" ],
+          dest: "dist/gitGraph.css"
         } ]
       },
       release: {
         files: [ {
-          src: [ "src/gitgraph.css" ],
-          dest: "build/gitgraph.css"
+          src: [ "src/gitGraph.css" ],
+          dest: "build/gitGraph.css"
         } ]
       },
       server: {
@@ -127,15 +127,15 @@ module.exports = function ( grunt ) {
         banner: "<%= banner %>"
       },
       dist: {
-        src: [ "src/gitgraph.js" ],
-        dest: "dist/gitgraph.min.js",
+        src: [ "src/gitGraph.js" ],
+        dest: "dist/gitGraph.min.js",
         options: {
           report: "min"
         }
       },
       release: {
-        src: [ "src/gitgraph.js" ],
-        dest: "build/gitgraph.min.js",
+        src: [ "src/gitGraph.js" ],
+        dest: "build/gitGraph.min.js",
         options: {
           report: "min"
         }

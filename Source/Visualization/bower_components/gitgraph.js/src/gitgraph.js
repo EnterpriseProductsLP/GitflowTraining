@@ -92,7 +92,7 @@
 
     // Tooltip layer
     this.tooltip = document.createElement("div");
-    this.tooltip.className = "gitgraph-tooltip";
+    this.tooltip.className = "gitGraph-tooltip";
     this.tooltip.style.position = "fixed";
     this.tooltip.style.display = "none";
 
@@ -364,7 +364,7 @@
    * @this GitGraph
    **/
   GitGraph.prototype.hover = function (event) {
-    var self = this.gitgraph;
+    var self = this.gitGraph;
     var isOut = true;
 
     function showCommitTooltip(commit) {
@@ -434,7 +434,7 @@
    * @this GitGraph
    **/
   GitGraph.prototype.click = function (event) {
-    this.gitgraph.applyCommits(event, function (commit, isOverCommit, event) {
+    this.gitGraph.applyCommits(event, function (commit, isOverCommit, event) {
       if (!isOverCommit) {
         return;
       }
