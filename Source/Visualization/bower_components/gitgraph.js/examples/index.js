@@ -32,7 +32,7 @@ var myTemplate = new GitGraph.Template(myTemplateConfig);
  ***********************/
 
 var config = {
-  template: "metro", // could be: "blackarrow" or "metro" or `template` (custom Template object)
+  template: "metro", // could be: "gitgraph" or "metro" or `template` (custom Template object)
   reverseArrow: false, // to make arrows point to ancestors, if displayed
   orientation: "vertical",
   // mode: "compact" // special compact mode: hide messages & compact graph

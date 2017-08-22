@@ -1432,7 +1432,7 @@
     var template = {};
 
     switch (name) {
-      case "blackarrow":
+      case "gitgraph":
         template = {
           branch: {
             color: "#000000",

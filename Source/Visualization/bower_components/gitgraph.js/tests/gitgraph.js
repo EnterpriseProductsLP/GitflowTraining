@@ -21,10 +21,10 @@ describe("Gitgraph.js", function () {
     it("should load the right template", function () {
       gitGraph = new GitGraph({
         canvas: canvas,
-        template: "blackarrow"
+        template: "gitgraph"
       });
 
-      expect(gitGraph.template).toEqual(gitGraph.newTemplate("blackarrow"));
+      expect(gitGraph.template).toEqual(gitGraph.newTemplate("gitgraph"));
     });
 
     it("should load the default template", function () {
@@ -65,7 +65,7 @@ describe("Gitgraph.js", function () {
     it("should have the color of branch template", function () {
       gitGraph = new GitGraph({
         canvas: canvas,
-        template: "blackarrow"
+        template: "gitgraph"
       });
       master = gitGraph.branch("master");
 
