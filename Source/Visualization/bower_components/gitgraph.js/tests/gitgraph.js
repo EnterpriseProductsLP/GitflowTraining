@@ -47,14 +47,14 @@ describe("Gitgraph.js", function () {
       });
 
       master = gitGraph.branch("master");
-      develop = gitGraph.branch("develop");
+      develop = gitGraph.branch("master");
     });
 
     it("should have a name", function () {
       expect(gitGraph.branches[0].name).toEqual("master");
     });
 
-    it("should be HEAD on develop", function () {
+    it("should be HEAD on master", function () {
       expect(gitGraph.HEAD).toEqual(develop);
     });
 
@@ -95,7 +95,7 @@ describe("Gitgraph.js", function () {
 
       master = gitGraph.branch("master");
       master.commit().commit();
-      develop = gitGraph.branch("develop");
+      develop = gitGraph.branch("master");
       develop.commit();
       master.commit("message");
       gitGraph.commit("plop");
@@ -115,7 +115,7 @@ describe("Gitgraph.js", function () {
       expect(master.commits[2].x).toEqual(0);
       expect(master.commits[2].y).toEqual(240);
 
-      // Commit on develop
+      // Commit on master
       expect(develop.commits[1].x).toEqual(50);
       expect(develop.commits[1].y).toEqual(320);
     });

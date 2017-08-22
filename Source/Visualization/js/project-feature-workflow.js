@@ -31,7 +31,7 @@ var gitGraph = new GitGraph({
 
 var develop = gitGraph.branch("develop");
 develop.commit({
-    message: "Created develop branch.",
+    message: "Created master branch.",
     author: "Eric Burcham <eburcham@eprod.com>"
 });
 
