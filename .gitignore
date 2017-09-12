@@ -23,6 +23,7 @@ bld/
 [Oo]bj/
 
 # Webstorm project directory.
+Source/.idea/workspace.xml
 Source/Visualization/.idea/workspace.xml
 
 # Visual Studio 2015 cache/options directory
