@@ -1,6 +1,17 @@
 /**
  * Created by Eric Burcham on 3/2/2017.
  */
+
+// These are the branch templates we'll use.
+var masterTemplate = {
+    color: "black",
+    name: "master",
+    commitDefaultOptions: {
+        color: "black",
+        dotColor: "black"
+    }
+};
+
 var gitgraph = new GitGraph({
     template: "metro",
     mode: "compact",
@@ -9,7 +20,7 @@ var gitgraph = new GitGraph({
 });
 
 // Create master and develop branches.
-var master = gitgraph.branch("master").commit().commit();
+var master = gitgraph.branch(masterTemplate).commit().commit();
 var develop = gitgraph.branch("develop").commit();
 
 // Add some initial commits for good measure.
